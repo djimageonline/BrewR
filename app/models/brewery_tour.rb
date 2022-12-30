@@ -1,0 +1,2 @@
+class BreweryTour < ApplicationRecord
+end
