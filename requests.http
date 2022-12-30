@@ -1,3 +1,5 @@
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NzI0NTI0Mzl9.ksFDE6bgJ-C_6S3IDEM6XakcJaTdf16mLd-TWnbck3E
+
 
 ### Breweries Index
 GET http://localhost:3000/breweries
@@ -18,4 +20,13 @@ Content-Type: application/json
   "email": "test@test.com",
   "password": "password",
   "password_confirmation": "password"
+}
+
+### Sessions create (login)
+POST http://localhost:3000/sessions.json
+Content-Type: application/json
+
+{
+  "email": "test@test.com",
+  "password": "password"
 }

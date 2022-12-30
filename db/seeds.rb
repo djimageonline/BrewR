@@ -8,14 +8,19 @@
 
 
 
-Brewery.create!(
-  name: "Goose Island", 
-  address: "North Ave", 
-  description: "Great Vaierty of Beers",)
+# Brewery.create!(
+#   name: "Goose Island", 
+#   address: "North Ave", 
+#   description: "Great Vaierty of Beers",)
 
-Brewery.create!(
-  name: "Three Floyds", 
-  address: "5555 Indiana", 
-  description: "Best Location for all types of brews",)
+# Brewery.create!(
+#   name: "Three Floyds", 
+#   address: "5555 Indiana", 
+#   description: "Best Location for all types of brews",)
+
+Tour.create!(
+  user_id: 1,
+  brewery_id: 2  
+)
 
 
