@@ -1,0 +1,8 @@
+
+### Breweries Index
+GET http://localhost:3000/breweries
+
+
+### Breweries Show
+GET http://localhost:3000/breweries/2.json
+
