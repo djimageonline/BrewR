@@ -8,16 +8,15 @@ Rails.application.routes.draw do
   get "/breweries" => "breweries#index"
   get "/breweries/:id" => "breweries#show"
 
-
-
-
   # USERS SIGN UP
   post "/users" => "users#create"
-
 
   # USERS LOGIN
   post "/sessions" => "sessions#create"
 
+  # CREATE A TOUR
+  get "/breweries_tours" => "breweries_tours#index"
+  post "/breweries_tours" => "breweries_tours#create"
 
 
 end

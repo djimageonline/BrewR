@@ -1,4 +1,4 @@
-@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NzI0NTI0Mzl9.ksFDE6bgJ-C_6S3IDEM6XakcJaTdf16mLd-TWnbck3E
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NzI0NTg5MzZ9.B6mxQdFk--8XKpfg0zwlHbRVwEQS7tTtVkbxjRHA35I
 
 
 ### Breweries Index
@@ -9,7 +9,7 @@ GET http://localhost:3000/breweries
 GET http://localhost:3000/breweries/2.json
 
 
-
+#-----------------------------------------------------------
 
 ### Users create (signup)
 POST http://localhost:3000/users.json
@@ -30,3 +30,21 @@ Content-Type: application/json
   "email": "test@test.com",
   "password": "password"
 }
+
+
+#-----------------------------------------------------------
+
+### Create a Tour
+
+POST http://localhost:3000/breweries_tours/1.json
+
+Content-Type: application/json
+
+{
+  "breweries_id": 2,
+  "tours_id": 1
+}
+
+
+### Tours Index
+GET http://localhost:3000/breweries_tours/1
