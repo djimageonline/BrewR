@@ -10,4 +10,9 @@ Rails.application.routes.draw do
 
 
 
+
+  # USERS SIGN UP
+  post "/users" => "users#create"
+
+
 end
