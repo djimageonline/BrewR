@@ -2,33 +2,43 @@ class ToursController < ApplicationController
   before_action :authenticate_user
 
 
+  def index
+    @tours = current_user.tours
+    render template: "tours/index"
+  end
+  
   def show
-    tour = Tour.find_by(
+    @tour = current_user.tours.find_by(
       id: params[:id],
-      brewery_id: params[:brewery_id]
     )
-    render json: tour
+
+
+    if @tour
+      render template: "tours/show"
+    else
+      render json: {message: "STOP, you suck"}
+    end
   end
 
 
   def create
-    tour = Tour.new(
+    @tour = Tour.new(
       user_id:current_user.id,
-      brewery_id: params[:brewery_id]
+      name:params[:name]
     )
     
-    if tour.save
-      render json: tour
+    if @tour.save
+      render json: @tour
     else
-      render json: { errors: tour.errors.full_messages }, status: 422
+      render json: { errors: @tour.errors.full_messages }, status: 422
     end
   end
 
   def destroy
-    tour_id = params[:id]
-    tour = Tour.find(tour_id)
+    @tour_id = params[:id]
+    @tour = Tour.find(@tour_id)
 
-    tour.destroy
+    @tour.destroy
     render json: {message: "This has been destroyed"}
   end  
 

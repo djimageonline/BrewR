@@ -1,0 +1,6 @@
+@tours.map do |tour|
+  {
+    id: tour.id,
+    name: tour.name
+  }
+end

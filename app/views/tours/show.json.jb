@@ -1,0 +1,5 @@
+{
+  id: @tour.id,
+  name: @tour.name,
+  breweries: @tour.breweries 
+}
