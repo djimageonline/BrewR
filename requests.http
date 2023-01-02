@@ -31,7 +31,6 @@ Content-Type: application/json
   "password": "password"
 }
 
-
 #-----------------------------------------------------------
 
 ### Create a Tour
@@ -45,7 +44,8 @@ Content-Type: application/json
 }
 
 ### Show Tour
-GET http://localhost:3000/tours/4.json
+GET http://localhost:3000/tours/4
+.json
 Authorization: Bearer {{jwt}}
 Content-Type: application/json
 
