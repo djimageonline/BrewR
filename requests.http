@@ -1,4 +1,4 @@
-@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NzI0NTg5MzZ9.B6mxQdFk--8XKpfg0zwlHbRVwEQS7tTtVkbxjRHA35I
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NzI3NzIzMDJ9.xOPBA8NoARB9Y3TsjDUfAUASrGyaNBM3fAYo1aNnXRM
 
 
 ### Breweries Index
@@ -16,8 +16,8 @@ POST http://localhost:3000/users.json
 Content-Type: application/json
 
 {
-  "name": "Johnny",
-  "email": "test@test.com",
+  "name": "Tere",
+  "email": "tere@test.com",
   "password": "password",
   "password_confirmation": "password"
 }
@@ -36,15 +36,40 @@ Content-Type: application/json
 
 ### Create a Tour
 
-POST http://localhost:3000/breweries_tours/1.json
+POST http://localhost:3000/tours
+Authorization: Bearer {{jwt}}
+Content-Type: application/json
 
+{ 
+  "brewery_id": 3
+}
+
+### Show Tour
+GET http://localhost:3000/tours/4.json
+Authorization: Bearer {{jwt}}
+Content-Type: application/json
+
+### Destroy Tour
+DELETE http://localhost:3000/tours/3.json
+Authorization: Bearer {{jwt}}
+Content-Type: application/json
+
+
+
+#-----------------------------------------------------------
+
+
+
+### Add Brewery/Tour
+
+POST http://localhost:3000/breweries_tours
+Authorization: Bearer {{jwt}}
 Content-Type: application/json
 
 {
-  "breweries_id": 2,
-  "tours_id": 1
+  "brewery_id": 2,
+  "tour_id": 2
 }
 
-
 ### Tours Index
-GET http://localhost:3000/breweries_tours/1
+GET http://localhost:3000/breweries_tours

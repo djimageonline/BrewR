@@ -1,21 +1,30 @@
 class BreweriesToursController < ApplicationController
 
   def index
-    breweries_tours = Brewery.all
-    render json: breweries_tours
+    @brewery_tour = BreweryTour.all
+    render json: @brewery_tour
   end
   
   def create
-    brewery_tour = BreweryTour.new(
-      breweries_id:params[:breweries_id],
-      tours_id:params[:tours_id]
+    @brewery_tour = BreweryTour.new(
+      brewery_id:params[:brewery_id],
+      tour_id:params[:tour_id]
     )
     
-    if brewery_tour.save
-      render json: brewery_tour
+    if @brewery_tour.save
+      render json: @brewery_tour
     else
-      render json: { errors: brewery_tour.errors.full_messages }, status: 422
+      render json: { errors: @brewery_tour.errors.full_messages }, status: 422
     end
-
   end
+
+  def show
+    @brewery_tour = BreweryTour.find_by(id: params[:id])
+    render json: @brewery_tour
+  end
+
+
+
+
+
 end

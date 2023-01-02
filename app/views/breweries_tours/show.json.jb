@@ -1,0 +1,6 @@
+ {
+    id: @brewery_tour.id,
+    brewery_id: @brewery_tour.brewery_id,
+    tour_id: @brewery_tour.tour_id,
+  }
+end
