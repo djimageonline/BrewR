@@ -1,6 +1,14 @@
 @tours.map do |tour|
   {
     id: tour.id,
-    name: tour.name
+    name: tour.name,
+    breweries: tour.breweries 
   }
 end
+
+
+
+
+
+
+

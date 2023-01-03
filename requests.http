@@ -1,5 +1,8 @@
 @jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NzI3ODkxODJ9.lN45HXQBzCr-eI3iiyyxOXVHbIxxzTa6UwAChfOfY1U"
 
+### API
+GET http://beermapping.com/webservice/loccity/afdeac53a3e38ffb25babbaa862d1de7/tampa,fl&s=json
+
 
 ### Breweries Index
 GET http://localhost:3000/breweries
@@ -74,3 +77,10 @@ Content-Type: application/json
   "brewery_id": 2,
   "tour_id": 2
 }
+
+
+#----------
+
+### API Request
+
+GET https://brianiswu-open-brewery-db-v1.p.rapidapi.com/breweries/5494
