@@ -49,7 +49,7 @@ Content-Type: application/json
 }
 
 ### Show Tour
-GET http://localhost:3000/tours/18.json
+GET http://localhost:3000/tours/7.json
 Authorization: Bearer {{jwt}}
 Content-Type: application/json
 
@@ -91,8 +91,15 @@ Content-Type: application/json
   "phone": "(407) 872-1117",
   "url": "orlandobrewing.com/",
   "overall": "89.5833375",
-  "imagecount": "3"
+  "imagecount": "3",
+  "tour_name": "Wedding"
 }
 
+
+#-----------------
+### Show Brewery Tour
+GET http://localhost:3000/breweries_tours/6.json
+Authorization: Bearer {{jwt}}
+Content-Type: application/json
 
 #----------
