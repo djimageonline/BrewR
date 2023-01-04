@@ -1,7 +1,4 @@
-@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NzI3ODkxODJ9.lN45HXQBzCr-eI3iiyyxOXVHbIxxzTa6UwAChfOfY1U"
-
-### API
-GET http://beermapping.com/webservice/loccity/afdeac53a3e38ffb25babbaa862d1de7/tampa,fl&s=json
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NzI4NjU2Mjd9.VRGV-MqvhYFRsNMCCRIKqIYNLeS-BsqQGMhC3LAZlOA
 
 
 ### Breweries Index
@@ -48,11 +45,11 @@ Authorization: Bearer {{jwt}}
 Content-Type: application/json
 
 { 
-  "name": "Prom"
+  "name": "Vaca Time"
 }
 
 ### Show Tour
-GET http://localhost:3000/tours/6.json
+GET http://localhost:3000/tours/18.json
 Authorization: Bearer {{jwt}}
 Content-Type: application/json
 
@@ -67,6 +64,12 @@ Content-Type: application/json
 #-----------------------------------------------------------
 
 
+### Brewery/Tour Index
+GET http://localhost:3000/breweries_tours
+Content-Type: application/json
+Authorization: Bearer {{jwt}}
+
+
 ### Add Brewery/Tour
 
 POST http://localhost:3000/breweries_tours
@@ -74,13 +77,22 @@ Authorization: Bearer {{jwt}}
 Content-Type: application/json
 
 {
-  "brewery_id": 2,
-  "tour_id": 2
+  "id": 971,
+  "name": "Orlando Brewing Partners",
+  "status": "Brewery",
+  "reviewlink": "https://beermapping.com/location/971",
+  "proxylink": "http://beermapping.com/maps/proxymaps.php?locid=971\u0026amp;d=5",
+  "blogmap": "http://beermapping.com/maps/blogproxy.php?locid=971\u0026amp;d=1\u0026amp;type=norm",
+  "street": "1301 Atlanta Avenue",
+  "city": "Orlando",
+  "state": "FL",
+  "zip": "32806",
+  "country": "United States",
+  "phone": "(407) 872-1117",
+  "url": "orlandobrewing.com/",
+  "overall": "89.5833375",
+  "imagecount": "3"
 }
 
 
 #----------
-
-### API Request
-
-GET https://brianiswu-open-brewery-db-v1.p.rapidapi.com/breweries/5494

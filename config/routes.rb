@@ -24,6 +24,7 @@ Rails.application.routes.draw do
   
   
   # BREWERY TOUR
+  get "/breweries_tours" => "breweries_tours#index"
   post "/breweries_tours" => "breweries_tours#create"
   get "/breweries_tours/:id" => "breweries_tours#show"
 
