@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   # Breweries
   get "/breweries" => "breweries#index"
   get "/breweries/:id" => "breweries#show"
+  post "/breweries" => "breweries#index"
 
   # USERS SIGN UP
   post "/users" => "users#create"

@@ -1,25 +1,26 @@
 class BreweriesController < ApplicationController
 
   def index
-    @brewery = Brewery.all
-    render json: @brewery.as_json
+    # @brewery = Brewery.all
+    # render json: @brewery.as_json
   
     #params
-    # city = "tampa"
-    # state = "fl"
+    pp params[:city]
+    city = params["city"] || "orlando"
+    state = params["state"]  || "fl"
 
-    # response = HTTP.get("http://beermapping.com/webservice/loccity/#{Rails.application.credentials.beer_api[:api_key]}/#{city},#{state}&s=json")
+    response = HTTP.get("http://beermapping.com/webservice/loccity/#{Rails.application.credentials.beer_api[:api_key]}/#{city},#{state}&s=json")
 
-    # show = response.parse(:json)
+    show = response.parse(:json)
 
-    # index = 0
-    # brewery_names = []
-    # while index < show.length
-    #   brewery_names << show[index]["name"]
-    #   index += 1
-    # end
+    index = 0
+    brewery_names = []
+    while index < show.length
+      brewery_names << show[index]["name"]
+      index += 1
+    end
 
-    # render json:  show.as_json
+    render json:  show.as_json
   end
 
 

@@ -49,7 +49,7 @@ Content-Type: application/json
 }
 
 ### Show Tour
-GET http://localhost:3000/tours/7.json
+GET http://localhost:3000/tours/6.json
 Authorization: Bearer {{jwt}}
 Content-Type: application/json
 
