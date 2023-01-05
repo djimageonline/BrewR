@@ -53,6 +53,15 @@ GET http://localhost:3000/tours/6.json
 Authorization: Bearer {{jwt}}
 Content-Type: application/json
 
+### Update Tour
+PATCH http://localhost:3000/tours/6
+Authorization: Bearer {{jwt}}
+Content-Type: application/json
+
+{
+  "name": "test"
+}
+
 ### Destroy Tour
 DELETE http://localhost:3000/tours/12.json
 Authorization: Bearer {{jwt}}

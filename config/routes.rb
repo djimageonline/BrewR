@@ -22,6 +22,7 @@ Rails.application.routes.draw do
   get "/tours/:id" => "tours#show"
   delete "/tours/:id" => "tours#destroy"
   get "/tours" => "tours#index"
+  patch "/tours/:id" => "tours#update"
   
   
   # BREWERY TOUR
