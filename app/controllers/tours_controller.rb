@@ -35,12 +35,12 @@ class ToursController < ApplicationController
   end
 
   def update
-    tour = Tour.find_by(id: params[:id])
-    tour.name = params[:name] || tour.name
-    if tour.save
-      render json: tour
+    @tour = Tour.find_by(id: params[:id])
+    @tour.name = params[:name] || @tour.name
+    if @tour.save
+      render template: "tours/show"
     else
-      render json: { errors: tour.errors.full_messages }, status: :bad_request
+      render json: { errors: @tour.errors.full_messages }, status: :bad_request
     end
   end
 

@@ -63,7 +63,7 @@ Content-Type: application/json
 }
 
 ### Destroy Tour
-DELETE http://localhost:3000/tours/12.json
+DELETE http://localhost:3000/tours/11.json
 Authorization: Bearer {{jwt}}
 Content-Type: application/json
 
