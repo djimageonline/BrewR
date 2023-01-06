@@ -14,30 +14,36 @@ class BreweriesToursController < ApplicationController
     #Step4: get tours that belong to current user :name
     #Step5: create the brewery tour entry: 
 
+    breweryId = params[:brewery]
+    name = params[:name]
+    street = params[:street]
+    city = params[:city]
+    state = params[:state]
+    zip = params[:zip]
+    url = params[:url]
+
     brewery = Brewery.find_by(
       name: params[:name]
     )
     
     if !brewery
-      address = "#{params[:street]}, #{params[:city]}, #{params[:state]}, #{params[:zip]}"
+      # address = "#{params[:street]}, #{params[:city]}, #{params[:state]}, #{params[:zip]}"
+
+      address = "#{street}, #{city}, #{state}, #{zip}"
 
       brewery = Brewery.new(
-        name: params[:name],
+        name: name,
         address: address,
-        description: params[:url]
+        description: url
       )  
       brewery.save
     end
 
-    tour = Tour.find_by(
-      user_id:current_user.id,
-      name: params[:tour_name]
-    )
     
     brewery_tour = BreweryTour.new(
       user_id: current_user.id,
       brewery_id: brewery.id,
-      tour_id: tour.id
+      tour_id: params[:tour]
     )
     
     if brewery_tour.save
