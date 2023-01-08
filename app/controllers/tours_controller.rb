@@ -28,7 +28,7 @@ class ToursController < ApplicationController
     )
     
     if @tour.save
-      render json: @tour
+      render template: "tours/show"
     else
       render json: { errors: @tour.errors.full_messages }, status: 422
     end
