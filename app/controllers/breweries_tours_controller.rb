@@ -59,5 +59,13 @@ class BreweriesToursController < ApplicationController
     render json: @brewery_tour
   end
 
+  def destroy
+    pp params
+    @brewery_tour = BreweryTour.where(brewery_id: params[:brew_id], tour_id: params[:tour_id])
+  
+    @brewery_tour[0].destroy
+    render json: {message: "This has been destroyed"}
+  end  
+
 
 end

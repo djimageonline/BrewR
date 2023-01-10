@@ -112,3 +112,8 @@ Authorization: Bearer {{jwt}}
 Content-Type: application/json
 
 #----------
+
+### Destroy Brewery-Tour
+DELETE http://localhost:3000/breweries_tours/2.json
+Authorization: Bearer {{jwt}}
+Content-Type: application/json
