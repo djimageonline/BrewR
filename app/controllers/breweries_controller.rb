@@ -13,6 +13,9 @@ class BreweriesController < ApplicationController
 
     show = response.parse(:json)
 
+    pp show[0]["id"]
+    pp "whats wrong"
+
     index = 0
     brewery_names = []
     while index < show.length
@@ -20,8 +23,14 @@ class BreweriesController < ApplicationController
       index += 1
     end
 
-    render json:  show.as_json
+
+    if !show[0]["id"]
+      render json: [].as_json
+    else
+      render json:  show.as_json
+    end
   end
+
 
 
   def show

@@ -7,7 +7,7 @@ class BreweriesToursController < ApplicationController
   end
   
   def create
-
+    
     #Step1: locate brewery in database
     #Step2: if you dont find brewery , create that brewery in db
     #Step3: use brewery id (wether you found it or created it)  ----- These are done

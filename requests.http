@@ -2,7 +2,7 @@
 
 
 ### Breweries Index
-GET http://localhost:3000/breweries
+GET http://localhost:3000/breweries?city=chicago&state=il
 
 
 ### Breweries Show
