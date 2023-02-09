@@ -27,7 +27,7 @@ Rails.application.configure do
   # config.asset_host = "http://assets.example.com"
 
   ### ADDED THIS TO TEST DEPLOY RAILWAY
-  # config.assets.compile = true
+  config.assets.compile = true
   # config.assets.precompile += ['application.js'] 
 
   # Specifies the header that your server uses for sending files.
