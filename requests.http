@@ -2,7 +2,7 @@
 
 
 ### Breweries Index
-GET http://localhost:3000/breweries
+GET http://localhost:3000/breweries?city=chicago&state=il
 
 
 ### Breweries Show
@@ -112,3 +112,8 @@ Authorization: Bearer {{jwt}}
 Content-Type: application/json
 
 #----------
+
+### Destroy Brewery-Tour
+DELETE http://localhost:3000/breweries_tours/2.json
+Authorization: Bearer {{jwt}}
+Content-Type: application/json

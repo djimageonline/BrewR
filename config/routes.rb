@@ -29,6 +29,7 @@ Rails.application.routes.draw do
   get "/breweries_tours" => "breweries_tours#index"
   post "/breweries_tours" => "breweries_tours#create"
   get "/breweries_tours/:id" => "breweries_tours#show"
+  delete "/breweries_tours/:brew_id/:tour_id" => "breweries_tours#destroy"
 
 
 end

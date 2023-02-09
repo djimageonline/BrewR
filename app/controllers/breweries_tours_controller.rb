@@ -7,7 +7,7 @@ class BreweriesToursController < ApplicationController
   end
   
   def create
-
+    
     #Step1: locate brewery in database
     #Step2: if you dont find brewery , create that brewery in db
     #Step3: use brewery id (wether you found it or created it)  ----- These are done
@@ -58,6 +58,14 @@ class BreweriesToursController < ApplicationController
     @brewery_tour = BreweryTour.find_by(id: params[:id])
     render json: @brewery_tour
   end
+
+  def destroy
+    pp params
+    @brewery_tour = BreweryTour.where(brewery_id: params[:brew_id], tour_id: params[:tour_id])
+  
+    @brewery_tour[0].destroy
+    render json: {message: "This has been destroyed"}
+  end  
 
 
 end
