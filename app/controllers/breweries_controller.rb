@@ -18,6 +18,7 @@ class BreweriesController < ApplicationController
 
     index = 0
     brewery_names = []
+    
     while index < show.length
       brewery_names << show[index]["name"]
       index += 1
