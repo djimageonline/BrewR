@@ -2,7 +2,7 @@
 
 
 ### Breweries Index
-GET http://localhost:3000/breweries?city=chicago&state=il
+GET http://localhost:3000/breweries?city=orlando&state=fl
 
 
 ### Breweries Show
@@ -66,9 +66,6 @@ Content-Type: application/json
 DELETE http://localhost:3000/tours/11.json
 Authorization: Bearer {{jwt}}
 Content-Type: application/json
-
-
-
 
 #-----------------------------------------------------------
 

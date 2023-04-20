@@ -1,7 +1,6 @@
 class ToursController < ApplicationController
   before_action :authenticate_user
 
-
   def index
     @tours = current_user.tours
     render template: "tours/index"
@@ -12,14 +11,12 @@ class ToursController < ApplicationController
       id: params[:id],
     )
 
-
     if @tour
       render template: "tours/show"
     else
       render json: {message: "STOP, you suck"}
     end
   end
-
 
   def create
     @tour = Tour.new(
@@ -44,8 +41,6 @@ class ToursController < ApplicationController
     end
   end
 
-
-
   def destroy
     @tour_id = params[:id]
     @tour = Tour.find(@tour_id)
@@ -53,5 +48,4 @@ class ToursController < ApplicationController
     @tour.destroy
     render json: {message: "This has been destroyed"}
   end  
-
 end
