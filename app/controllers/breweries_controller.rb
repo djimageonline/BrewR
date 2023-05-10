@@ -3,6 +3,7 @@ class BreweriesController < ApplicationController
   def index
     city = params["city"] || "orlando"
     state = params["state"]  || "fl"
+    
     response = HTTP.get("http://beermapping.com/webservice/loccity/#{Rails.application.credentials.beer_api[:api_key]}/#{city},#{state}&s=json")
     show = response.parse(:json)
 

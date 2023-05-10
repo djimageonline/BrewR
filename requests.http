@@ -2,7 +2,7 @@
 
 
 ### Breweries Index
-GET http://localhost:3000/breweries?city=orlando&state=fl
+GET http://localhost:3000/breweries?city=tampa&state=fl
 
 
 ### Breweries Show
